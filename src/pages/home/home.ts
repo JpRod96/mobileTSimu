@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { RestProvider } from '../../providers/rest/rest';
 
 @Component({
   selector: 'page-home',
@@ -7,8 +8,21 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  json:any;
+  label:string;
+  label1:string;
 
+  constructor(public navCtrl: NavController,
+              private restProvider: RestProvider) {
+    this.label = "oi";
+    this.chargeExample();
   }
 
+  private chargeExample(){
+    this.restProvider.getMailbox(1)
+    .then(data => {
+      this.label1 = JSON.stringify(data);
+      console.log(data);
+    });
+  }
 }
