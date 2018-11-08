@@ -4,4 +4,12 @@
     "cordova": {}
   },
   "type": "ionic-angular"
+  
+  ,
+  "proxies": [
+    {
+      "path":"/mailbox",
+      "proxyUrl": "http://pruebatsimu.herokuapp.com/mailbox"
+    }
+  ]
 }
