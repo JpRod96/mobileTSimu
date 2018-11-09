@@ -6,6 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { HttpBackend, HttpXhrBackend } from '@angular/common/http';
 import { NativeHttpModule, NativeHttpBackend, NativeHttpFallback } from 'ionic-native-http-connection-backend';
 import { Platform } from 'ionic-angular';
+import { ConfirmationPage } from './../pages/confirmation/confirmation';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -14,7 +15,8 @@ import { RestProvider } from '../providers/rest/rest';
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    ConfirmationPage
   ],
   imports: [
     BrowserModule,
@@ -24,7 +26,8 @@ import { RestProvider } from '../providers/rest/rest';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    ConfirmationPage
   ],
   providers: [
     StatusBar,
